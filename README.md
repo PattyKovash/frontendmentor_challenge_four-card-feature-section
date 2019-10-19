@@ -12,7 +12,7 @@ Live: https://pattykovash.github.io/frontendmentor_challenge_four-card-feature-s
 
 Weapons of Choice:
 - HTML5
-- CSS3 (no frameworks, Flexbox Layout)
+- CSS3 (no frameworks, Flexbox Layout, mobile first)
 - Adobe Photoshop
 - Chrome Extension: Page Ruler Redux
 
