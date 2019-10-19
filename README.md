@@ -19,7 +19,8 @@ Weapons of Choice:
 Notes:
 - Added a link to a page displaying the static design JPG
 - Added some animations for fun
-- It was more difficult to get pixel measurements of the page after a width of 500px. The ruler extension does not work when in Chrome's dev responsive mode. 
+- It was more difficult to get pixel measurements of the page after a width of 500px. The ruler extension does not work when in Chrome's dev responsive mode.
+- Kept the background the same color for smaller screen sizes instead of white like the design.
 
 ## The challenge
 
