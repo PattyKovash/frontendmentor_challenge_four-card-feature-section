@@ -1,0 +1,128 @@
+/*//////////////////////////////////////////////////////////////////////////////
+// TABLE OF CONTENTS
+// 1.0 - source__body
+// 2.0 - source
+// 3.0 - source__containter
+// 4.0 - source__heading
+// 5.0 - source__img
+// 6.0 - source footer
+// 7.0 - animations
+//////////////////////////////////////////////////////////////////////////////*/
+
+/* 1.0 - source__body
+*******************************************************************************/
+.source__body {
+    background-color: #fff;
+}
+
+/* 2.0 - source
+*******************************************************************************/
+
+.source {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 3.0 - source__container
+*******************************************************************************/
+.source__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    max-width: 2500px;
+}
+
+.source__container .source {
+    margin-bottom: 10rem;
+}
+
+@media screen and (min-width: 116.563em) {
+    .source__container .source:first-child {
+        /* margin-bottom: 0; */
+        margin-right: 50px;
+    }
+}
+
+/* 4.0 - source__heading
+*******************************************************************************/
+.source__heading {
+    margin-bottom: 5rem;
+}
+
+.source__heading > * {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    color: hsl(234, 12%, 34%);
+}
+
+.source__heading > p {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+/* 5.0 - source__img
+*******************************************************************************/
+
+.source__img {
+    box-shadow: 0 13px 15px 0 rgba(70, 77, 107, 0.1);
+    width: 100%;
+}
+
+.source__img--desktop {
+    width: 90%;
+}
+
+.source--mobile {
+    animation: moveInLeft 2s ease-out;
+}
+
+.source--desktop {
+    animation: moveInRight 2s ease-out;
+}
+
+/* 6.0 - source footer
+*******************************************************************************/
+
+.source__body .footer {
+    margin-bottom: 5rem;
+}
+
+/* 7.0 - animation
+*******************************************************************************/
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}

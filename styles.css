@@ -8,6 +8,7 @@
 // 6.0 - header
 // 7.0 - cards
 // 8.0 - footer
+// 9.0 - animations
 //////////////////////////////////////////////////////////////////////////////*/
 
 /* 1.0 - Reset
@@ -71,16 +72,16 @@ body {
 /* 6.0 - header
 *******************************************************************************/
 .header {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     color: hsl(234, 12%, 34%);
-    font-size: 1.8rem;
     text-align: center;
     margin-bottom: 5rem;
+    animation: moveInDown 2s ease-out;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .header__heading {
+    font-size: 2.4rem;
     line-height: 1;
     padding: .75rem 0;
 }
@@ -96,13 +97,32 @@ body {
     margin-top: 1.6rem;
 }
 
+@media screen and (min-width: 30.000em) {
+    .header {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media screen and (min-width: 34.375em) {
+    .header__heading {
+        font-size: 3.6rem;
+    }
+
+    .header__tagline {
+        font-size: 1.5rem;
+    }
+}
+
 /* 7.0 - cards
 *******************************************************************************/
 .cards {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 1142px;
+    animation: moveInUp 2s ease-out;
 }
 
 .cards__middle {
@@ -112,7 +132,7 @@ body {
 
 .cards__card {
     background-color: #fff;
-    max-width: 350px;
+    max-width: 311px;
     margin: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 13px 15px 0 rgba(216,226,236,.7);
@@ -164,12 +184,40 @@ body {
     float: right;
 }
 
+@media screen and (min-width: 30.000em) {
+    .cards__card {
+        max-width: 350px;
+    }
+}
+
+@media screen and (min-width: 48.000em) {
+    .cards__middle {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 74.688em) {
+    .cards {
+        flex-direction: row;
+    }
+
+    .cards__middle {
+        flex-direction: column;
+    }
+}
+
 /* 8.0 - footer
 *******************************************************************************/
-
 .footer {
     font-size: 1.1rem;
-    text-align: center; 
+    text-align: center;
+    animation: moveInUp 2s ease-out;
+}
+
+.footer p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer__link,
@@ -184,11 +232,39 @@ body {
 }
 
 .footer__link:hover {
-    font-size: 1.3rem;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    color: hsl(0, 78%, 62%);
 }
 
-.footer__link:active {
-    font-size: 1.1rem;
+/* 9.0 - animations
+*******************************************************************************/
+@keyframes moveInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    80% {
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    80% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
