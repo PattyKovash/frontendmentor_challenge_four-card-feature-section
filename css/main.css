@@ -97,6 +97,12 @@ body {
     margin-top: 1.6rem;
 }
 
+@media screen and (min-width: 28.125em) {
+    .header__heading {
+        font-size: 3.2rem;
+    }
+}
+
 @media screen and (min-width: 30.000em) {
     .header {
         padding-left: 4rem;
